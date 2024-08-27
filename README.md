@@ -31,4 +31,4 @@ rent.csv
 
 #### 效果
 ---
-![示例](./image/sample.png "示例")
+![示例](./img/sample.png "示例")
