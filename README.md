@@ -13,17 +13,17 @@ Python >= 3.6
 #### 使用方法
 ---
 
-运行命令
+运行命令: 
 `
 cd rentHouse;scrapy crawl rent
 `
 
-默认起始URL
+默认起始URL: 
 `
 https://gz.zu.anjuke.com/?from=esf_list"
 `
 
-爬取数据存储位置
+爬取数据存储位置: 
 
 `
 rent.csv
