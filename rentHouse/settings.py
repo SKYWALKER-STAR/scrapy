@@ -40,10 +40,9 @@ ROBOTSTXT_OBEY = True
 DEFAULT_REQUEST_HEADERS = {
    'Accept'                     :'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
    'Accept-Language'            :'en',
-   'User-Agent'                 :'Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36',
+   'User-Agent'                 : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.75 Safari/537.36',
    'Accept-Encoding'            :'gzip, deflate, sdch, br',
    'Connection'                 :'keep-alive',
-   "referer"                    : "https://www.baidu.com.com/",
 }
 
 # Enable or disable spider middlewares
@@ -67,7 +66,8 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'rentHouse.pipelines.RentPipelines': 300,
+    #'rentHouse.pipelines.RentPipelines': 300,
+    'rentHouse.pipelines.RentPipelinesMysql': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

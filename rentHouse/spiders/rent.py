@@ -12,6 +12,8 @@ class RentSpider(scrapy.Spider):
     def start_requests(self):
         urls = [
              "https://gz.zu.anjuke.com/?from=esf_list"
+             #"https://bj.zu.anjuke.com/?from=esf_list"
+             #"https://wh.zu.anjuke.com/?from=HomePage_TopBar"
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -99,7 +101,6 @@ class RentSpider(scrapy.Spider):
             item['J']      = link
 
             yield item
-
         next_page  = response.css("div.multi-page a.aNxt::attr(href)").get()
         if next_page is not None:
            yield response.follow(next_page, callback=self.parse)
