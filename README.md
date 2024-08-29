@@ -1,4 +1,5 @@
-### RentHouse Scrapy ---
+### RentHouse Scrapy
+---
 
 #### 介绍
 ---
@@ -10,14 +11,14 @@
 Scrapy 2.6.3
 ```
 ```
-Python >= 3.6
+Python >= 3.8
 ```
 
-本项目利用Grafana + MySQL展示爬取到的数据,了解更多可访问以下地址:
+本项目利用Grafana + MySQL来展示数据:
 
-[租房信息展示](http://8.134.95.226:8089/grafana)
+[租房信息展示](http://8.134.95.226:8089/grafana/d/d227a851-4ec9-4893-a508-a10e8e213196/mysql-dashboard?orgId=1&refresh=30m)
 
-同时，我们还提供csv数据文件导出，用户可以通过修改settings.py中的pipeline配置来获取csv格式的数据文件，可执行以下若干命令控制pepelines:
+通过修改settings.py中的pipeline配置来获取csv格式的数据文件，执行以下命令控制pepelines配置:
 
 1. 打开CSV文件输出
 ```bash
@@ -42,7 +43,8 @@ sed -i 's/'rentHouse.pipelines.RentPipelinesMysql'/#&/g' settings.py
 #### 使用方法
 ---
 
-修改pipelines,py文件中MySQL连接的配置
+修改pipelines.py文件中MySQL连接配置
+
 ```bash
         self.conn = pymysql.connect(
                 host = '127.0.0.1',
@@ -71,5 +73,5 @@ https://gz.zu.anjuke.com/?from=esf_list"
 ![CSV示例](./img/sample-csv.png "CSV示例")
 
 2. Grafana面板
-![Grafana面板示例](./img/sample-grafana.png "Grafana面板示例)
+![Grafana面板示例](./img/sample-grafana.png "Grafana面板示例")
 
